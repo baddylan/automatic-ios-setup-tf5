@@ -11,9 +11,10 @@ This is meant to make setup as straight-forward and easy as I possibly can. I wa
 4. Download this repository. [main.zip](https://github.com/baddylan/automatic-ios-setup-tf5/archive/refs/heads/main.zip)
    * If on the device you're going to be using for this, long-press that link until it provides the option to "Copy Link"
 5. In iSH-AOK type `wget` and then paste that link and press Enter.
-6. Once you've done this, use `unzip main.zip` to extract the files.
-7. After that's been done, `cd main`.
-8. Run ./setup.sh, which will proceed to start setting everything up that needs to be done just one time for it to be setup to be used without further configuration, but
+   * If `wget` can't be found, run the command 'sudo apk add wget`
+6. Once you've done this, run `unzip main.zip` to extract the files.
+7. After that's been done, run `cd automatic-ios-setup-tf5-main`.
+8. Run `./setup.sh`, which will proceed to start setting everything up that needs to be done just one time for it to be setup to be used without further configuration, but
    configuring tf5 is highly recommended.
 9. Let it finish completely. Once it's done, it let you know that it's fully complete with 'Setup complete. TF5 now ready for use.'
 10. Just to start a fresh session (You won't lose your files or anything that have already been setup, don't wory) completely close the app and re-launch it.
