@@ -8,7 +8,7 @@ This is meant to make setup as straight-forward and easy as I possibly can. I wa
 1. If you haven't already, download TestFlight from the appstore linked above.
 2. Once you've got testflight, join the iSH-AOK Testflight beta [here](https://testflight.apple.com/join/X1flyiqE).
 3. Install iSH-AOK and launch the application.
-4. Download this repository. [main.zip](https://github.com/baddylan/auto-ios-setup-tf5/archive/refs/heads/main.zip)
+4. Download this repository. [main.zip](https://github.com/baddylan/automatic-ios-setup-tf5/archive/refs/heads/main.zip)
    * If on the device you're going to be using for this, long-press that link until it provides the option to "Copy Link"
 5. In iSH-AOK type `wget` and then paste that link and press Enter.
 6. Once you've done this, use `unzip main.zip` to extract the files.
