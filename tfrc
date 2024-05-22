@@ -1,0 +1,69 @@
+;;;; This file is not required, but contains examples of commands you
+;;;; might want to use in your personal configuration file (~/.tfrc).
+;;;; Feel free to customize these commands to your own tastes.
+
+;;; Enable windowing mode.
+/visual on
+
+;;; Enable paging
+;/more on
+
+;;; Enable suppression of introductory MUD text.
+;/quiet on
+
+;;; Disable old-style slash interpretation
+;;; I recommend this unless you have old macros containing multiple slashes.
+/set oldslash=off
+
+;;; Enter the directory where you keep your tf files.
+/cd ~/tf-dir
+
+;;; Define default filenames for /load*, /save*, and /log commands.
+/def MACROFILE	= ~/tf-dir/macros.tf
+/def HILITEFILE	= ~/tf-dir/hilite.tf
+/def GAGFILE	= ~/tf-dir/gag.tf
+/def TRIGFILE	= ~/tf-dir/trig.tf
+/def BINDFILE	= ~/tf-dir/bind.tf
+/def HOOKFILE	= ~/tf-dir/hook.tf
+/def WORLDFILE	= ~/tf-dir/world.tf
+/def LOGFILE	= tiny.log
+
+;;; Configure Infinilog
+
+;/set inflog_fileformat=%{~/TFLogs/[W].%%F.log}
+/require infinilog.tf
+/set inflog_fileformat=~/TFLogs/[W]/[W].%F.log
+/inflog_status
+
+;;; Configure Repost
+/require repost.tf
+
+;;; Set hilite attributes.
+/set hiliteattr=BCrgb035
+
+;;; Add worlds. Must come before savehist.tf stuff.
+;; Examples of adding a world to connect to. Change or remove these.
+;; The first one uses SSL/TLS for security.
+;/test addworld ("<WorldName>", "tiny.muck.*", "<hostname/ip address>", "<Port>", "<Character name>", "<Password>", "", "x")
+
+
+;; This one is just an unencrypted connection.
+;/test addworld ("<WorldName>", "tiny.muck.*", "<hostname/ip address>", "<Port>", "<Character name>", "<Password>")
+;; As an example, this would be for Tapestries,
+;/test addworld ("Tapestries", "tiny.muck.*", "tapestries.fur.com", "2069", "<Character name for login>, "<Password>")
+
+
+;;; Setup savehist.tf
+/require savehist.tf
+/load_histories
+/repeat -0:10 i /save_histories
+
+;;; Load files.
+;;; Only useful if you have these files, of course.
+; /loadworld
+/loadhilite
+/load ~/tf-dir/partial.tf
+; /loadgag
+; /loaddef
+/loadbind
+/loadtrig 
