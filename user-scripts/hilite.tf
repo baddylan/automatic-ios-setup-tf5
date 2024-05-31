@@ -1,16 +1,21 @@
 ;;;; TinyFugue 5 highlighting definitions
 
-
+;; If you have watchfor (wf and/or wft) connect/disconnect notifications enabled, they will be highlighted bold yellow. (with time in HH:mm:ss added. Commented out by default.)
 ;/def -Fp1 -aBCrgb540 -mregexp -t'^Somewhere.*muck,\\s[\\w.\'-]+\\shas\\s(dis|re)?connected\\sat\\s[0-9]+\\:[0-9]+\\:[0-9]+\\.\\s?$'
 
+;; If you have watchfor (wf and/or wft) connect/disconnect notifications enabled, they will be highlighted bold yellow.
 /def -Fp1 -aBCrgb540 -mregexp -t'^Somewhere.*muck,\\s[\\w.\'-]+\\shas\\s(dis|re)?connected\\.\\s?$'
 
+;; Incoming pages with 'page #prepend <page %w>' setup on it. Highlights bold blue.
 ;/def -Fp1 -aBCrgb035 -mregexp -t'^<page\\s[0-9]+\\:[0-9]+(am|pm)?>\\s(.+).$'
 
+;; Handles outgoing pages, highlights bold blue.
 /def -Fp1 -aBCrgb035 -mregexp -t'^(You page,|You page-pose,)' 
 
+;; Handles outgoing whispers, highlights bold blue.
 /def -Fp1 -aBCrgb035 -mregexp -t'^You whisper,(.+)$' 
 
+;; Incoming whispers with 'whisper #prepend <whisp at: %W>' setup on it. Highlights bold blue.
 ;/def -Fp1 -aBCrgb035 -mregexp -t'^<whisp\\sat\\:\\s[0-9]+\\:[0-9]+(am|pm)?>\\s(.+)\\.$' 
 
 ;/def -Fp1 -aBCrgb035 -mregexp -t'^\\[(.+)\\sjust\\slooked\\sin\\syour\\sdirection!\\s\\((.+)\\s(.+)\\)\\]$' 
