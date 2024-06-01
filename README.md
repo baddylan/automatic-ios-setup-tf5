@@ -22,5 +22,5 @@ This is meant to make setup as straight-forward and easy as I possibly can. I wa
 12. To save, press the '^' icon on the screen, and `x` on the keyboard. It'll ask if you want to save, press `y' and hit return when it asks about the file name.
 
 ## Credits for the scripts I use.
-[tinyfugue-scripts collection by Sketch](https://github.com/Sketch/tinyfugue-scripts)
+[tinyfugue-scripts collection by Sketch](https://github.com/Sketch/tinyfugue-scripts)  
 [idler.tf by Christian Robinson](https://christianrobinson.name/programming/tinyfugue/idler.tf)
