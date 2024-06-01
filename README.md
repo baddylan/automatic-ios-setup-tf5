@@ -20,3 +20,7 @@ This is meant to make setup as straight-forward and easy as I possibly can. I wa
 10. Just to start a fresh session (You won't lose your files or anything that have already been setup, don't wory) completely close the app and re-launch it.
 11. Afterwards, type 'nano tfrc' to edit the file used for configuring the client. More comments have been left in there, so follow them to get what you want.
 12. To save, press the '^' icon on the screen, and `x` on the keyboard. It'll ask if you want to save, press `y' and hit return when it asks about the file name.
+
+## Credits for the scripts I use.
+[tinyfugue-scripts collection by Sketch](https://github.com/Sketch/tinyfugue-scripts)
+[idler.tf by Christian Robinson](https://christianrobinson.name/programming/tinyfugue/idler.tf)
