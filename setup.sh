@@ -40,6 +40,8 @@ if [ 'echo $?' == 0 ]; then
     mkdir -p ~/TFLogs/Tapestries/
     echo "Creating the tf-hist directory for storing input history."
     mkdir -p ~/tf-hist
+    echo "alias tf='/usr/local/bin/tf -n'" >> ~/.bashrc
+    alias tf='/usr/local/bin/tf -n'
     echo "Finished build and installing TinyFugue 5. Start it with 'tf'"
 else
     echo "Build failed. Cannot continue." 
