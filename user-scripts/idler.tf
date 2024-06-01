@@ -17,7 +17,7 @@
 ; history logs.
 ;
 ; Changelog for baddylan/Kobalt:
-; Revision 1.7  2024/06/01 15:18:00  Kobalt
+; Revision 1.7  2024/06/01 15:44:09 CDT  Kobalt
 ; Ensured it works with TinyFugue 5 beta 7.
 ; 
 ; Also changed the command it sends to 'ni', a null-action on the MUCK I'm
