@@ -17,6 +17,9 @@
 ; history logs.
 ;
 ; Changelog for baddylan/Kobalt:
+; Revision 1.7p1  2024/06/04 12:54:59 CDT  Kobalt
+; Minor change to adjust colors of the echo messages.
+;
 ; Revision 1.7  2024/06/01 15:44:09 CDT  Kobalt
 ; Ensured it works with TinyFugue 5 beta 7.
 ; 
@@ -76,7 +79,7 @@
 		/_idler %; \
 		/echo -aBCrgb540 -p %% The No-Idle loop has started.@{x} %; \
 	/else \
-		/echo %% No-Idle loop already running. %; \
+		/echo -aBCrgb500 -p %% No-Idle loop already running.@{x} %; \
 	/endif
 
 /def _idler = \
@@ -111,9 +114,9 @@
 	/if ({idlerpid} != -1) \
 		/kill %idlerpid %; \
 		/set idlerpid -1 %; \
-		/echo -aBCrgb540 -p %% No-Idle loop killed.@{x} %; \
+		/echo -aBCrgb500 -p %% No-Idle loop killed.@{x} %; \
 	/else \
-		/echo %% No-Idle loop not running. %; \
+		/echo -aBCrgb500 -p %% No-Idle loop not running.@{x} %; \
 	/endif
 
 /def ki = /killidler
