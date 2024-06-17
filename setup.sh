@@ -29,6 +29,7 @@ cd tinyfugue
 ./configure --prefix=/usr/local && make -j2
 if [ 'echo $?' == 0 ]; then
     sudo make install
+    echo "Copying tinyfugue-scripts to /usr/local/share/tf-lib directory."
     sudo cp tinyfugue-scripts/*.tf /usr/local/share/tf-lib/
     echo "Copying tfrc file to main directory. Please use 'nano ~/tfrc' to edit the file before using tf5."
     cp tfrc ~/tfrc
