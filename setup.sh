@@ -24,13 +24,16 @@ echo "Getting ready to build Tinyfugue 5..."
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
 export PATH="/usr/local/bin:$PATH"
 sudo apk add git 
-git clone -b widechar https://github.com/kruton/tinyfugue.git
+# This is no longer the version of TF5 being used.
+#git clone -b widechar https://github.com/kruton/tinyfugue.git
+# Now using tinyfugue-rebirth with better patches
+git clone https://github.com/ingwarsw/tinyfugue.git
 cd tinyfugue
-./configure --prefix=/usr/local && make -j2
+./configure --prefix=/usr/local --datarootdir=/usr/local/share/tf5 && make -j2
 if [ 'echo $?' == 0 ]; then
     sudo make install
-    echo "Copying tinyfugue-scripts to /usr/local/share/tf-lib directory."
-    sudo cp tinyfugue-scripts/*.tf /usr/local/share/tf-lib/
+    echo "Copying tinyfugue-scripts to /usr/local/share/tf5/tf-lib directory."
+    sudo cp tinyfugue-scripts/*.tf /usr/local/share/tf5/tf-lib/
     echo "Copying tfrc file to main directory. Please use 'nano ~/tfrc' to edit the file before using tf5."
     cp tfrc ~/tfrc
     echo "Creating the ~/tf-dir directory."
